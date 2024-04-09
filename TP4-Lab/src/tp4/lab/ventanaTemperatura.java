@@ -87,6 +87,8 @@ public class ventanaTemperatura extends javax.swing.JFrame {
         Matcher m = p.matcher(jtTemperatura.getText());
         if (!m.matches()) {
             JOptionPane.showMessageDialog(null, "Ingrese un numero valido");
+        jtTemperatura.setText("");
+            
         }else{
             float celsius = Float.parseFloat(jtTemperatura.getText());
             float far = (celsius * 9/5) + 32;
